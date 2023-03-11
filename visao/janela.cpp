@@ -44,7 +44,7 @@ void Janela::painelCentral(std::unique_ptr<Gtk::VBox> &layout) {
   std::unique_ptr<Gtk::HBox> layoutPainel(new Gtk::HBox());
   layout->pack_start(*layoutPainel, true, true, 0);
   Janela::painelDeObjetos(layoutPainel);
-  Janela::areaDesenho(layoutPainel);
+  Janela::areaViewport(layoutPainel);
   layoutPainel.release();
 }
 
@@ -55,12 +55,12 @@ void Janela::painelDeObjetos(std::unique_ptr<Gtk::HBox> &layoutPainel) {
   layoutPainel->pack_start(*painelObjetos.release(), false, false, 2);
 }
 
-void Janela::areaDesenho(std::unique_ptr<Gtk::HBox> &layoutPainel) {
-  std::unique_ptr<Gtk::ScrolledWindow> painelDesenho(new Gtk::ScrolledWindow());
-  std::unique_ptr<Gtk::HBox> layoutPainelDesenho(new Gtk::HBox());
-  layoutPainelDesenho->set_halign(Gtk::ALIGN_CENTER);
-  layoutPainelDesenho->set_valign(Gtk::ALIGN_CENTER);
-  layoutPainelDesenho->pack_start(desenho, false, false, 0); // Área de Desenho
-  painelDesenho->add(*layoutPainelDesenho.release());
-  layoutPainel->pack_start(*painelDesenho.release(), true, true, 0);
+void Janela::areaViewport(std::unique_ptr<Gtk::HBox> &layoutPainel) {
+  std::unique_ptr<Gtk::ScrolledWindow> painelViewport(new Gtk::ScrolledWindow());
+  std::unique_ptr<Gtk::HBox> layoutPainelViewport(new Gtk::HBox());
+  layoutPainelViewport->set_halign(Gtk::ALIGN_CENTER);
+  layoutPainelViewport->set_valign(Gtk::ALIGN_CENTER);
+  layoutPainelViewport->pack_start(viewport, false, false, 0); // Área de Viewport
+  painelViewport->add(*layoutPainelViewport.release());
+  layoutPainel->pack_start(*painelViewport.release(), true, true, 0);
 }

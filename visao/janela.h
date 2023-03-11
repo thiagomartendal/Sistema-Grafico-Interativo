@@ -3,11 +3,11 @@
 
 #include <gtkmm.h>
 #include "menu.h"
-#include "desenho.h"
+#include "viewport.h"
 
 class Janela : public Gtk::Window {
 private:
-  Desenho desenho;
+  Viewport viewport;
   void propriedades();
   void layout();
   void menu(std::unique_ptr<Gtk::VBox> &layout);
@@ -15,7 +15,7 @@ private:
   void sair();
   void painelCentral(std::unique_ptr<Gtk::VBox> &layout);
   void painelDeObjetos(std::unique_ptr<Gtk::HBox> &layoutPainel);
-  void areaDesenho(std::unique_ptr<Gtk::HBox> &layoutPainel);
+  void areaViewport(std::unique_ptr<Gtk::HBox> &layoutPainel);
 
 public:
   Janela();

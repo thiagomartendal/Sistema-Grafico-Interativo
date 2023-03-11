@@ -7,7 +7,7 @@
 class Menu : public Gtk::MenuBar {
 private:
   void arquivo();
-  void ferramenta();
+  void ferramentas();
 
 public:
   Menu();
