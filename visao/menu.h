@@ -6,11 +6,14 @@
 
 class Menu : public Gtk::MenuBar {
 private:
+  ItemMenu *itemMenu;
   void arquivo();
   void ferramentas();
 
 public:
   Menu();
+  ~Menu();
+  ItemMenu *getItemMenu();
 };
 
 #endif

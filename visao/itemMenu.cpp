@@ -1,24 +1,14 @@
 #include "itemMenu.h"
 
-ItemMenu *ItemMenu::itemMenu = 0;
-
 ItemMenu::ItemMenu() {
   ItemMenu::arquivo();
   ItemMenu::ferramentas();
 }
 
 ItemMenu::~ItemMenu() {
-  delete itemMenu;
   delete sair;
   delete selecao;
   delete linha;
-}
-
-ItemMenu *ItemMenu::inst() {
-  if (itemMenu == 0) {
-    itemMenu = new ItemMenu();
-  }
-  return itemMenu;
 }
 
 void ItemMenu::arquivo() {

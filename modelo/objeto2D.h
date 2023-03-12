@@ -5,8 +5,6 @@
 #include "cor.h"
 #include "coordenada.h"
 
-
-
 class Objeto2D {
 private:
   std::vector<Coordenada> pontos;
