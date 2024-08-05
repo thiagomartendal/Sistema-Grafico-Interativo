@@ -7,4 +7,5 @@ Projeto em desenvolvimento.
 ## Compilação
 
 Para compilar basta executar o comando do makefile em um terminal: make compilar
+
 Observação: O projeto utiliza a biblioteca GTKMM para o desenvolvimento da interface gráfica, e a mesma deve ser instalada para poder compilar o projeto.
